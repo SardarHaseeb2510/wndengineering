@@ -45,10 +45,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4>KSA Contact Info</h4>
             <div className="contact-info">
-              <p>📍  </p>
+              <p>📍 King Abdullah Road, Building No: 2305, 202 First Floor </p>
               <p>📧 business@wndengineering.com</p>
-              <p>📞 +92 3145300069</p>
-              <p>🕒 Mon-Fri: 9AM-6PM</p>
+              <p>📞 +966 539020452</p>
+              <p>🕒 Thu-Sun: 9AM-5PM</p>
             </div>
           </div>
         </div>
