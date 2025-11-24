@@ -11,15 +11,15 @@ const Footer = () => {
               Your ultimate destination for amazing deals and wish fulfillment. 
               Making dreams come true, one deal at a time.
             </p>
-            <div className="social-links">
+            {/* <div className="social-links">
               <a href="#" className="social-link">📘</a>
               <a href="#" className="social-link">🐦</a>
               <a href="#" className="social-link">📷</a>
               <a href="#" className="social-link">💼</a>
-            </div>
+            </div> */}
           </div>
           
-          <div className="footer-section">
+          {/* <div className="footer-section">
             <h4>Quick Links</h4>
             <ul className="footer-links">
               <li><a href="#home">Home</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
               <li><a href="#deals">Deals</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
+          </div> */}
           
          
           
