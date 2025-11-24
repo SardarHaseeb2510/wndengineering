@@ -75,7 +75,7 @@ const Main = ({ currentPage, onNavigate }) => {
 
               <div className="hero-content">
                 <AnimatedElement id="hero-title" delay={0.2}>
-                  <h1 className="hero-title">Wish N Deal Engineering (Pvt) Ltd</h1>
+                  <h1 className="hero-title">Wish'N'Deal Engineering (Pvt) Ltd</h1>
                 </AnimatedElement>
 
                 <AnimatedElement id="hero-subtitle" delay={0.4}>
@@ -109,7 +109,7 @@ const Main = ({ currentPage, onNavigate }) => {
           {/* Company Overview Section */}
           <AnimatedElement id="company-overview">
             <div className="hero-container2">
-              <h2 className="hero-title2">WISH "N" DEAL ENGINEERING (PVT) LTD.</h2>
+              <h2 className="hero-title2">WISH'N'DEAL ENGINEERING (PVT) LTD.</h2>
               <p>
                 A group with collaborative spirit that facilitates Engineers and disseminates
                 construction services, fostering the world's Ethical, Social, Economic, and
@@ -189,7 +189,7 @@ const Main = ({ currentPage, onNavigate }) => {
           <AnimatedElement id="projects-showcase">
             <section className="custom-projects-section">
               <h2 className="custom-heading-main">
-                WISH "N" DEAL ENGINEERING (PVT) LTD.
+                WISH'N'DEAL ENGINEERING (PVT) LTD.
               </h2>
               <div className="custom-heading-underline"></div>
               <p className="custom-desc-main">

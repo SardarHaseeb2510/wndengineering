@@ -31,7 +31,7 @@ const Header = ({ currentPage, onNavigate }) => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1>WishnDeal</h1>
+          <h1>Wish'N'Deal</h1>
         </div>
         <nav className="nav">
           <ul className="nav-list">
