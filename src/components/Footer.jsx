@@ -47,8 +47,8 @@ const Footer = () => {
             <div className="contact-info">
               <p id='location'>📍 King Abdullah Road, Building No: 2305, 202 First Floor </p>
               <p>📧 business@wndengineering.com</p>
-              <p>📞 +966 539020452</p>
-              <p>🕒 Thu-Sun: 9AM-5PM</p>
+              <p>📞 +966 (13) 361 9165</p>
+              <p>🕒 Sun-Thu: 9AM-5PM</p>
             </div>
           </div>
         </div>
