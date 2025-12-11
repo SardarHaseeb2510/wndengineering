@@ -46,7 +46,8 @@ const Training = () => {
   return (
     <section id="training" className="training-section">
       <div className="container">
-        <h2>Course Contents</h2>
+        <a href="https://whatsapp.com/channel/0029VbCFI8h0wajoqzfgl21b" target="_blank" rel="noopener noreferrer" className="whatsapp-link">Join our WhatsApp Channel</a>
+        <h2>HSE Extensive Skill Program</h2>
         <p className="training-intro">
           Comprehensive training programs designed to ensure workplace safety and professional development.
           Our courses cover essential safety protocols, technical skills, and leadership development.
