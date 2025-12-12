@@ -92,7 +92,7 @@ const Header = ({ currentPage, onNavigate }) => {
                 className={`nav-link ${currentPage === 'training' ? 'active' : ''}`}
                 onClick={() => handleClick('training')}
               >
-                Training
+                HSE Skills
               </button>
             </li>
           </ul>
