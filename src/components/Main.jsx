@@ -238,19 +238,56 @@ const Main = ({ currentPage, onNavigate }) => {
                       image: '/ITTower.jpeg',
                       alt: 'ITT Tower Project'
                     }
-                  ].map((project, index) => (
+                  ].concat([
+                    {
+                      id: 'banu-abdullah-2',
+                      title: 'Banu Abdullah Projects',
+                      image: '/BanuAbdullah.png',
+                      alt: 'Banu Abdullah Project'
+                    },
+                    {
+                      id: 'upcoming-projects-2',
+                      title: 'Upcoming Projects',
+                      image: '/single-building.png',
+                      alt: 'Upcoming Projects'
+                    },
+                    {
+                      id: 'burj-al-haram-2',
+                      title: 'Burj Al Haram',
+                      image: '/Burj Al Haram Brochure .pdf', // This might need to be changed to an image
+                      alt: 'Burj Al Haram Project'
+                    },
+                    {
+                      id: 'filling-tower-2',
+                      title: 'Filling Tower',
+                      image: '/FillingTower.jpeg',
+                      alt: 'Filling Tower Project'
+                    },
+                    {
+                      id: 'al-haram-tower-2',
+                      title: 'Al Haram Tower',
+                      image: '/AlHaramTower.jpeg',
+                      alt: 'Al Haram Tower Project'
+                    },
+                    {
+                      id: 'itt-tower-2',
+                      title: 'ITT Tower',
+                      image: '/ITTower.jpeg',
+                      alt: 'ITT Tower Project'
+                    }
+                  ]).map((project, index) => (
                     <AnimatedElement
-                      key={project.id}
+                      key={`${project.id}-${index}`}
                       id={`project-${index}`}
                       animation="animate-scale"
-                      delay={index * 0.1}
+                      delay={(index % 6) * 0.1}
                     >
                       <div
                         className="project-icon-card"
-                        onClick={() => onNavigate(project.id)}
+                        onClick={() => onNavigate(project.id.replace('-2', ''))}
                         role="button"
                         tabIndex={0}
-                        onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.id)}
+                        onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.id.replace('-2', ''))}
                       >
                         <div className="project-icon-image-container">
                           <img
