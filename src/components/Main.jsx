@@ -200,7 +200,7 @@ const Main = ({ currentPage, onNavigate }) => {
 
               {/* Project Icons Carousel */}
               <div className="projects-carousel-container">
-                <div className="projects-carousel">
+                <div className="projects-track">
                   {[
                     {
                       id: 'banu-abdullah',
@@ -246,29 +246,23 @@ const Main = ({ currentPage, onNavigate }) => {
                       navigateTo: 'projects'
                     }
                   ]).map((project, index) => (
-                    <AnimatedElement
+                    <div
                       key={`${project.id}-${index}`}
-                      id={`project-${index}`}
-                      animation="animate-scale"
-                      delay={(index % 4) * 0.1}
+                      className="project-icon-card"
+                      onClick={() => onNavigate(project.navigateTo)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.navigateTo)}
                     >
-                      <div
-                        className="project-icon-card"
-                        onClick={() => onNavigate(project.navigateTo)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.navigateTo)}
-                      >
-                        <div className="project-icon-image-container">
-                          <img
-                            src={project.image}
-                            alt={project.alt}
-                            className="project-icon-image"
-                          />
-                        </div>
-                        <div className="project-icon-title">{project.title}</div>
+                      <div className="project-icon-image-container">
+                        <img
+                          src={project.image}
+                          alt={project.alt}
+                          className="project-icon-image"
+                        />
                       </div>
-                    </AnimatedElement>
+                      <div className="project-icon-title">{project.title}</div>
+                    </div>
                   ))}
                 </div>
               </div>

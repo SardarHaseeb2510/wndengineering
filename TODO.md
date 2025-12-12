@@ -2,6 +2,7 @@
 
 ## Completed Tasks
 - [x] Make projects carousel continuous like Partners & Clients section
+- [x] Remove padding from projects carousel to match clients section exactly
 - [x] Link "Upcoming Projects" to moreupcomingproject.jsx
 - [x] Link "Burj Al Haram" to projects.jsx and add picture
 - [x] Delete "Filling Tower", "Al Haram Tower", and "ITT Tower" projects
