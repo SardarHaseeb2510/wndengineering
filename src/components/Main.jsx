@@ -193,45 +193,77 @@ const Main = ({ currentPage, onNavigate }) => {
               </h2>
               <div className="custom-heading-underline"></div>
               <p className="custom-desc-main">
-                Our team of highly skilled professionals has made it possible to improve the 
-                quality of real estate experience for our prestigious clients through innovative 
+                Our team of highly skilled professionals has made it possible to improve the
+                quality of real estate experience for our prestigious clients through innovative
                 engineering solutions and exceptional project delivery.
               </p>
 
-              <div className="custom-projects-flex">
-                <AnimatedElement id="banu-project" animation="animate-left">
-                  <div 
-                    className="custom-projects-block" 
-                    onClick={() => onNavigate('banu-abdullah')}
-                    role="button"
-                    tabIndex={0}
-                    onKeyPress={(e) => e.key === 'Enter' && onNavigate('banu-abdullah')}
-                  >
-                    <img
-                      src="/project-collage.png"
-                      alt="Banu Abdullah Project Showcase"
-                      className="custom-image-main"
-                    />
-                    <div className="custom-caption-main">BANU ABDULLAH PROJECTS</div>
-                  </div>
-                </AnimatedElement>
-
-                <AnimatedElement id="upcoming-project" animation="animate-right">
-                  <div 
-                    className="custom-projects-block" 
-                    onClick={() => onNavigate('upcoming-projects')}
-                    role="button"
-                    tabIndex={0}
-                    onKeyPress={(e) => e.key === 'Enter' && onNavigate('upcoming-projects')}
-                  >
-                    <img
-                      src="/single-building.png"
-                      alt="Upcoming Projects Preview"
-                      className="custom-image-main"
-                    />
-                    <div className="custom-caption-main">UPCOMING PROJECTS</div>
-                  </div>
-                </AnimatedElement>
+              {/* Project Icons Carousel */}
+              <div className="projects-carousel-container">
+                <div className="projects-carousel">
+                  {[
+                    {
+                      id: 'banu-abdullah',
+                      title: 'Banu Abdullah Projects',
+                      image: '/BanuAbdullah.png',
+                      alt: 'Banu Abdullah Project'
+                    },
+                    {
+                      id: 'upcoming-projects',
+                      title: 'Upcoming Projects',
+                      image: '/single-building.png',
+                      alt: 'Upcoming Projects'
+                    },
+                    {
+                      id: 'burj-al-haram',
+                      title: 'Burj Al Haram',
+                      image: '/Burj Al Haram Brochure .pdf', // This might need to be changed to an image
+                      alt: 'Burj Al Haram Project'
+                    },
+                    {
+                      id: 'filling-tower',
+                      title: 'Filling Tower',
+                      image: '/FillingTower.jpeg',
+                      alt: 'Filling Tower Project'
+                    },
+                    {
+                      id: 'al-haram-tower',
+                      title: 'Al Haram Tower',
+                      image: '/AlHaramTower.jpeg',
+                      alt: 'Al Haram Tower Project'
+                    },
+                    {
+                      id: 'itt-tower',
+                      title: 'ITT Tower',
+                      image: '/ITTower.jpeg',
+                      alt: 'ITT Tower Project'
+                    }
+                  ].map((project, index) => (
+                    <AnimatedElement
+                      key={project.id}
+                      id={`project-${index}`}
+                      animation="animate-scale"
+                      delay={index * 0.1}
+                    >
+                      <div
+                        className="project-icon-card"
+                        onClick={() => onNavigate(project.id)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.id)}
+                      >
+                        <div className="project-icon-image-container">
+                          <img
+                            src={project.image}
+                            alt={project.alt}
+                            className="project-icon-image"
+                          />
+                        </div>
+                        <div className="project-icon-title">{project.title}</div>
+                      </div>
+                    </AnimatedElement>
+                  ))}
+                </div>
               </div>
             </section>
           </AnimatedElement>

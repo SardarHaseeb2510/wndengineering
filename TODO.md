@@ -1,5 +1,8 @@
-# TODO: Change Website Name to WNDEngineering
+# Project Icons Scrolling Implementation
 
-- [x] Update index.html: Change <title> from "Vite + React" to "WNDEngineering"
-- [x] Update package.json: Change "name" from "my-react-app" to "wndeengineering"
-- [x] Verify changes by checking the updated files
+## Tasks
+- [x] Modify Main.jsx to replace static project blocks with a horizontal scrolling carousel
+- [x] Add project data array with icons/images and navigation paths
+- [x] Implement click handlers for navigation to project pages
+- [x] Update Main.css for carousel styling and responsiveness
+- [x] Test scrolling functionality and navigation
