@@ -1,8 +1,12 @@
-# Project Icons Scrolling Implementation
+# Project Carousel Updates
 
-## Tasks
-- [x] Modify Main.jsx to replace static project blocks with a horizontal scrolling carousel
-- [x] Add project data array with icons/images and navigation paths
-- [x] Implement click handlers for navigation to project pages
-- [x] Update Main.css for carousel styling and responsiveness
-- [x] Test scrolling functionality and navigation
+## Completed Tasks
+- [x] Make projects carousel continuous like Partners & Clients section
+- [x] Link "Upcoming Projects" to moreupcomingproject.jsx
+- [x] Link "Burj Al Haram" to projects.jsx and add picture
+- [x] Delete "Filling Tower", "Al Haram Tower", and "ITT Tower" projects
+- [x] Test carousel functionality and verify navigation links work correctly
+
+## Remaining Tasks
+- [ ] Optimize carousel performance
+- [ ] Add loading states for images

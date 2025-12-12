@@ -206,88 +206,58 @@ const Main = ({ currentPage, onNavigate }) => {
                       id: 'banu-abdullah',
                       title: 'Banu Abdullah Projects',
                       image: '/BanuAbdullah.png',
-                      alt: 'Banu Abdullah Project'
+                      alt: 'Banu Abdullah Project',
+                      navigateTo: 'banu-abdullah'
                     },
                     {
                       id: 'upcoming-projects',
                       title: 'Upcoming Projects',
                       image: '/single-building.png',
-                      alt: 'Upcoming Projects'
+                      alt: 'Upcoming Projects',
+                      navigateTo: 'more-upcoming-projects'
                     },
                     {
                       id: 'burj-al-haram',
                       title: 'Burj Al Haram',
-                      image: '/Burj Al Haram Brochure .pdf', // This might need to be changed to an image
-                      alt: 'Burj Al Haram Project'
-                    },
-                    {
-                      id: 'filling-tower',
-                      title: 'Filling Tower',
-                      image: '/FillingTower.jpeg',
-                      alt: 'Filling Tower Project'
-                    },
-                    {
-                      id: 'al-haram-tower',
-                      title: 'Al Haram Tower',
-                      image: '/AlHaramTower.jpeg',
-                      alt: 'Al Haram Tower Project'
-                    },
-                    {
-                      id: 'itt-tower',
-                      title: 'ITT Tower',
-                      image: '/ITTower.jpeg',
-                      alt: 'ITT Tower Project'
+                      image: '/riseBuilding.jpeg',
+                      alt: 'Burj Al Haram Project',
+                      navigateTo: 'projects'
                     }
                   ].concat([
                     {
                       id: 'banu-abdullah-2',
                       title: 'Banu Abdullah Projects',
                       image: '/BanuAbdullah.png',
-                      alt: 'Banu Abdullah Project'
+                      alt: 'Banu Abdullah Project',
+                      navigateTo: 'banu-abdullah'
                     },
                     {
                       id: 'upcoming-projects-2',
                       title: 'Upcoming Projects',
                       image: '/single-building.png',
-                      alt: 'Upcoming Projects'
+                      alt: 'Upcoming Projects',
+                      navigateTo: 'more-upcoming-projects'
                     },
                     {
                       id: 'burj-al-haram-2',
                       title: 'Burj Al Haram',
-                      image: '/Burj Al Haram Brochure .pdf', // This might need to be changed to an image
-                      alt: 'Burj Al Haram Project'
-                    },
-                    {
-                      id: 'filling-tower-2',
-                      title: 'Filling Tower',
-                      image: '/FillingTower.jpeg',
-                      alt: 'Filling Tower Project'
-                    },
-                    {
-                      id: 'al-haram-tower-2',
-                      title: 'Al Haram Tower',
-                      image: '/AlHaramTower.jpeg',
-                      alt: 'Al Haram Tower Project'
-                    },
-                    {
-                      id: 'itt-tower-2',
-                      title: 'ITT Tower',
-                      image: '/ITTower.jpeg',
-                      alt: 'ITT Tower Project'
+                      image: '/riseBuilding.jpeg',
+                      alt: 'Burj Al Haram Project',
+                      navigateTo: 'projects'
                     }
                   ]).map((project, index) => (
                     <AnimatedElement
                       key={`${project.id}-${index}`}
                       id={`project-${index}`}
                       animation="animate-scale"
-                      delay={(index % 6) * 0.1}
+                      delay={(index % 4) * 0.1}
                     >
                       <div
                         className="project-icon-card"
-                        onClick={() => onNavigate(project.id.replace('-2', ''))}
+                        onClick={() => onNavigate(project.navigateTo)}
                         role="button"
                         tabIndex={0}
-                        onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.id.replace('-2', ''))}
+                        onKeyPress={(e) => e.key === 'Enter' && onNavigate(project.navigateTo)}
                       >
                         <div className="project-icon-image-container">
                           <img
