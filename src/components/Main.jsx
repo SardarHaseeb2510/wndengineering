@@ -4,6 +4,7 @@ import Projects from './Projects';
 import UpcomingProjects from './UpcomingProjects';
 import BanuAbdullah from './BanuAbdullah';
 import MoreUpcomingProjects from './MoreUpcomingProjects';
+import DrillingServices from './DrillingServices';
 import { useEffect, useState } from 'react';
 
 const Main = ({ currentPage, onNavigate }) => {
@@ -497,6 +498,7 @@ const Main = ({ currentPage, onNavigate }) => {
       {currentPage === 'projects' && <Projects />}
       {currentPage === 'banu-abdullah' && <BanuAbdullah />}
       {currentPage === 'more-upcoming-projects' && <MoreUpcomingProjects />}
+      {currentPage === 'drilling' && <DrillingServices />}
     </main>
   );
 };

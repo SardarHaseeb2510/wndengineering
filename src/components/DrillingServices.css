@@ -1,0 +1,72 @@
+.drilling-services {
+  padding: 60px 0;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%);
+  color: var(--text-dark);
+}
+
+.drilling-services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.drilling-services .section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: var(--accent-teal);
+}
+
+.drilling-services .services-description {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  font-size: 1.05rem;
+  color: rgba(0,0,0,0.7);
+}
+
+.drilling-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  color: rgba(0,0,0,0.65);
+}
+
+.drilling-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.drilling-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.drilling-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+  display: block;
+}
+
+.drilling-item h3 {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  color: var(--accent-teal);
+}
+
+.drilling-item p {
+  color: rgba(0,0,0,0.65);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .drilling-services { padding: 40px 0 }
+  .drilling-services .section-title { font-size: 2rem }
+}

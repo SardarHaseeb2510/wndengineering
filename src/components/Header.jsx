@@ -95,6 +95,14 @@ const Header = ({ currentPage, onNavigate }) => {
                 HSE Skills
               </button>
             </li>
+            <li>
+              <button
+                className={`nav-link ${currentPage === 'drilling' ? 'active' : ''}`}
+                onClick={() => handleClick('drilling')}
+              >
+                Drilling Services
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
