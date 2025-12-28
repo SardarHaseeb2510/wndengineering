@@ -107,15 +107,7 @@ const Main = ({ currentPage, onNavigate }) => {
             </div>
           </section>
 
-          {/* About Us Intro Section */}
-          <AnimatedElement id="about-intro">
-            <section className="about-intro-section">
-              <div className="container">
-                <h2>About Us</h2>
-                <p>We deliver turnkey construction, equipment rental and technical manpower solutions across Saudi Arabia and Pakistan since 2006 — backed by ISO-aligned processes, a commitment to safety and lasting client value.</p>
-              </div>
-            </section>
-          </AnimatedElement>
+          
 
           {/* Projects Showcase Section */}
           <AnimatedElement id="projects-showcase">
