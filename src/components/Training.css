@@ -38,7 +38,7 @@
   padding: 0 20px;
   position: relative; /* ensure the list sits above the hero */
   z-index: 3;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .training-section h2 {
@@ -196,12 +196,12 @@
 
 @media (min-width: 1600px) {
   /* allow a bit more overlap on very wide screens where hero text has more breathing room */
-  .training-list-wrap { margin-top: -140px; }
+  /* .training-list-wrap { margin-top: -140px; } */
 }
 
 @media (max-width: 900px) {
   .training-section {
-    padding: 48px 0;
+    /* padding: 48px 0; */
   }
 
   .training-section h2 {
@@ -230,7 +230,7 @@
   .training-right { order: -1; margin-bottom: 1rem }
   .training-image { max-width: 100%; }
 
-  .training-hero-hero { padding: 3rem 0; min-height: 40vh; background-position: center 45% }
+  .training-hero-hero {  min-height: 40vh; background-position: center 45% }
   .training-hero-title { font-size: 1.6rem }
   .training-hero-lead { font-size: 0.98rem }
 

@@ -1103,10 +1103,11 @@ body {
   background: var(--main-yellow) !important;
   color: var(--dark-navy) !important;
   border: none !important;
+  justify-content: center !important;
 }
 
 /* Keep spacing for hero buttons */
-.hero-buttons { display:flex; gap:12px; align-items:center }
+.hero-buttons { display:flex; gap:12px; align-items:center; justify-content:center; }
 
 /* remove accidental duplicate/unused rule */
 .btn-primary-1 { display:none !important; }

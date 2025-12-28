@@ -1,211 +1,91 @@
 .banu-abdullah-page {
-  min-height: 100vh;
-  padding: 40px 20px;
+  min-height: calc(100vh - 2px);
+  padding: 0 20px 2px; /* ensure top padding is zero so section is flush under header */
+  margin: 0; /* remove any top margin */
   text-align: center;
-  background: var(--gradient-secondary);
+  /* use project image as full-bleed background */
+  background-image: linear-gradient(rgba(var(--dark-navy-rgb),0.45), rgba(var(--dark-navy-rgb),0.45)), url('/BanuAbdullah_2.png');
+  background-size: cover;
+  background-position: center center; /* cover the whole section */
+  background-repeat: no-repeat;
   color: var(--white);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* keep content at top */
   align-items: center;
   position: relative;
   overflow: hidden;
 }
 
 .banu-abdullah-page::before {
+  /* subtle dark overlay so content remains readable over image */
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(38, 166, 154, 0.1) 0%, transparent 50%);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(var(--dark-navy-rgb),0.2) 0%, rgba(var(--dark-navy-rgb),0.6) 100%);
   z-index: 1;
 }
 
-.banu-abdullah-page > * {
-  position: relative;
-  z-index: 2;
-}
+.banu-abdullah-page > * { position: relative; z-index: 2; }
 
 .project-hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: 1400px;
   width: 100%;
-  margin-bottom: 60px;
-  gap: 40px;
+  margin: 0 auto 60px auto;
+  /* gap: 40px; */
   animation: fadeInUp 0.8s ease-out;
+  background: transparent;
+  padding: 0; /* flush under header */
 }
 
 .hero-content {
-  flex: 1;
+  flex: 1 1 60%; /* left column takes ~60% */
   text-align: left;
   padding-right: 40px;
+  color: var(--white);
+  padding-bottom: 1.5rem;
+  margin-top: 12px;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 2.6rem;
   color: var(--white);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 800;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-.hero-content p {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.7;
-  font-weight: 300;
-}
+.hero-content p { color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; font-weight: 400; }
 
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* right column image - always visible on large screens as a smaller inline image */
+.hero-image { flex: 0 0 36%; display: flex; justify-content: flex-end; align-items: flex-start; }
+.project-main-image { display: block; width: 100%; max-width: 360px; height: auto; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,0.32); border: 0; }
 
-.project-main-image {
-  max-width: 100%;
-  max-height: 400px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px var(--shadow-light);
-  transition: all 0.4s ease;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-.project-main-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 60px var(--shadow-light);
-}
-
-.project-highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  width: 100%;
-  animation: fadeInUp 0.8s ease-out 0.4s both;
-}
+/* project highlights/cards sit below the hero */
+.project-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; width: 100%; margin: 0 auto; animation: fadeInUp 0.8s ease-out 0.4s both; }
 
 .highlight-card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 30px 25px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px var(--shadow-light);
-  transition: all 0.4s ease;
-  border: 1px solid rgba(78, 205, 196, 0.2);
+  background: rgba(255,255,255,0.04);
+  padding: 24px 20px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(var(--dark-navy-rgb),0.12);
+  transition: all 0.35s ease;
+  border: 0;
   position: relative;
   overflow: hidden;
+  color: var(--white);
+  border-left: 4px solid rgba(var(--main-accent-rgb),0.95);
 }
 
-.highlight-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-primary);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-.highlight-card:hover::before {
-  transform: translateX(0);
-}
-
-.highlight-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 20px 50px var(--shadow-light);
-  background: var(--white);
-}
-
-.highlight-card h3 {
-  font-size: 1.5rem;
-  color: var(--accent-teal);
-  margin-bottom: 15px;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.highlight-card:hover h3 {
-  color: var(--primary-cyan);
-}
-
-.highlight-card p {
-  font-size: 1rem;
-  color: var(--text-dark);
-  line-height: 1.6;
-  margin: 0;
-  font-weight: 400;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@media (max-width: 768px) {
-  .banu-abdullah-page {
-    padding: 30px 15px;
-  }
-
-  .project-hero {
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-
-  .hero-content {
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .project-main-image {
-    max-height: 300px;
-  }
-
-  .project-highlights {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .highlight-card {
-    padding: 25px 20px;
-  }
-
-  .highlight-card h3 {
-    font-size: 1.3rem;
-  }
+@media (max-width: 991px) {
+  .project-hero { flex-direction: column; gap: 20px; padding: 20px 0; }
+  .hero-content { flex: 1 1 auto; text-align: center; padding-right: 0; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-image { order: 2; width: 100%; display: flex; justify-content: center; }
+  .project-main-image { max-width: 100%; height: auto; display: block; }
+  .project-highlights { grid-template-columns: 1fr; gap: 20px; padding: 0 10px; }
+  .banu-abdullah-page { padding: 0 15px 2px; }
 }

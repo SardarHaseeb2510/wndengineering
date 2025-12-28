@@ -15,7 +15,7 @@ const BanuAbdullah = () => {
         </div>
         <div className="hero-image">
           <img
-            src="/BanuAbdullah.png"
+            src="/BanuAbdullah_2.png"
             alt="Banu Abdullah Project"
             className="project-main-image"
           />

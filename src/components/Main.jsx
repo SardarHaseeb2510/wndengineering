@@ -95,12 +95,7 @@ const Main = ({ currentPage, onNavigate }) => {
                     >
                       Learn More
                     </button>
-                    <button
-                      className="btn hero-cta"
-                      onClick={() => onNavigate('contact')}
-                    >
-                      Get In Touch
-                    </button>
+                   
                   </div>
                 </AnimatedElement>
               </div>
