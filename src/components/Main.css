@@ -352,7 +352,7 @@ body {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 800;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1px;
   color: var(--white);
 }
 
@@ -457,7 +457,7 @@ body {
   overflow: hidden;
   position: relative;
   padding-top: 5px;
-  margin-top: 2px;
+  /* margin-top: 2px; */
 }
 
 .custom-projects-section::before {
@@ -1172,6 +1172,11 @@ body {
 @media (max-width: 600px) {
   .hero {
     padding: 4rem 0;
+    height: auto;
+  }
+
+  .custom-projects-section {
+    margin-top: 1px;
   }
   
   .hero-title {
