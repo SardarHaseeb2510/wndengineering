@@ -134,9 +134,9 @@ const Header = ({ currentPage, onNavigate }) => {
             </ul>
           </nav>
 
-          <div className="cta-quote">
+          {/* <div className="cta-quote">
             <button className="btn btn-primary" onClick={() => handleClick('contact')}>Get A Quote</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

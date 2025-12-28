@@ -4,46 +4,40 @@ import './Projects.css';
 const Projects = () => {
   const buildingPlans = [
     {
-      floor: "Ground Floor",
-      description: "Retail outlets and commercial spaces",
-      features: ["Prime retail location", "High foot traffic", "Modern storefronts"],
-      image: "/floorP1.jpg"
-    },
-    {
-      floor: "1st Floor",
-      description: "Commercial offices and business spaces",
-      features: ["Professional environment", "Modern facilities", "Parking access"],
-      image: "/floorP2.jpg"
-    },
-    {
-      floor: "2nd Floor",
-      description: "Additional office spaces and services",
-      features: ["Flexible layouts", "Natural lighting", "Meeting rooms"],
-      image: "/floorP3.jpg"
-    },
-    {
-      floor: "3rd Floor",
-      description: "Studio apartments and residential units",
-      features: ["Modern design", "Fully furnished", "City views"],
-      image: "/floorP4.jpg"
-    },
-    {
-      floor: "4th Floor",
-      description: "Premium studio apartments",
-      features: ["Luxury finishes", "Balcony access", "Smart home features"],
-      image: "/AlHaramTower.jpeg"
-    },
-    {
-      floor: "5th Floor",
-      description: "Executive apartments and penthouses",
-      features: ["Spacious layouts", "Premium amenities", "Rooftop access"],
+      floor: "Basement Floor",
+      // description: "Retail outlets and commercial spaces",
+      // features: ["Prime retail location", "High foot traffic", "Modern storefronts"],
       image: "/fp1.jpg"
     },
     {
-      floor: "6th Floor",
-      description: "Penthouse suites with exclusive amenities",
-      features: ["Private terraces", "Luxury interiors", "Concierge service"],
+      floor: "Ground Floor",
+      // description: "Commercial offices and business spaces",
+      // features: ["Professional environment", "Modern facilities", "Parking access"],
       image: "/fp2.jpg"
+    },
+    {
+      floor: "1st Floor",
+      // description: "Additional office spaces and services",
+      // features: ["Flexible layouts", "Natural lighting", "Meeting rooms"],
+      image: "/fp3.jpg"
+    },
+    {
+      floor: "2nd and 3rd Floor",
+      // description: "Studio apartments and residential units",
+      // features: ["Modern design", "Fully furnished", "City views"],
+      image: "/fp4.jpg"
+    },
+    {
+      floor: "4th and 5th Floor",
+      // description: "Premium studio apartments",
+      // features: ["Luxury finishes", "Balcony access", "Smart home features"],
+      image: "/fp5.jpg"
+    },
+    {
+      floor: "Mumty",
+      // description: "Executive apartments and penthouses",
+      // features: ["Spacious layouts", "Premium amenities", "Rooftop access"],
+      image: "/fp6.jpg"
     }
   ];
 
@@ -82,9 +76,18 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <header className="projects-header">
-        <h1>Burj Al Haram</h1>
-        <p className="subtitle">A project of WISH 'N' DEAL ENGINEERING(PVT) LTD.</p>
+        <div className="projects-header-inner">
+          <div>
+            <h1>Burj Al Haram</h1>
+            <p className="subtitle">A project of WISH 'N' DEAL ENGINEERING(PVT) LTD.</p>
+          </div>
+        </div>
       </header>
+
+      {/* Separate preview image so building can be viewed */}
+      <div className="project-preview">
+        <img src="/burjulharam.png" alt="Burj Al Haram Preview" />
+      </div>
 
       <section className="intro-section">
         <h2>An Ultra-Modern Development in FAISAL MARGALLA CITY (FMC)</h2>
@@ -110,14 +113,14 @@ const Projects = () => {
               </div>
               <div className="plan-content">
                 <h3>{plan.floor}</h3>
-                <p>{plan.description}</p>
+                {/* <p>{plan.description}</p>
                 <div className="plan-features">
                   {plan.features.map((feature, featureIndex) => (
                     <span key={featureIndex} className="feature-tag">
                       {feature}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
