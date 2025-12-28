@@ -5,18 +5,25 @@ import './Projects.css';
 const DrillingServices = () => {
   return (
     <section className="services drilling-services">
-      <div className="container">
-        <h2 className="section-title">Drilling Services</h2>
-        <p className="services-description">
-          Our experienced drilling team performs complete drilling operations including site survey, borehole drilling, and water well development. We follow strict safety and quality standards and use modern drilling rigs and equipment.
-        </p>
-
-        <div className="drilling-intro">
-          <p>
-            Our team works across all phases of the drilling process — from surveying and mobilization to drilling, cleaning, and testing — ensuring reliable water extraction and ground investigation services.
+      {/* Full-bleed hero with water image and overlay text */}
+      <section className="drilling-hero drilling-hero--full">
+        <div className="drilling-hero-inner">
+          <h1 className="drilling-hero-title">Drilling Services</h1>
+          <p className="drilling-hero-lead">
+            Our experienced drilling team performs complete drilling operations
+            including site survey, borehole drilling, and water well development.
+            We follow strict safety and quality standards and use modern drilling
+            rigs and equipment.
+          </p>
+          <p className="drilling-hero-lead">
+            Our team works across all phases of the drilling process — from
+            surveying and mobilization to drilling, cleaning, and testing —
+            ensuring reliable water extraction and ground investigation services.
           </p>
         </div>
+      </section>
 
+      <div className="container">
         <div className="drilling-grid">
           <div className="drilling-item">
             <video controls className="drilling-video">
@@ -24,7 +31,10 @@ const DrillingServices = () => {
               Your browser does not support the video tag.
             </video>
             <h3>Water cleaning process with Compressor</h3>
-            <p>Video of water cleaning process using compressor to flush and clean the borehole.</p>
+            <p>
+              Video of water cleaning process using compressor to flush and clean
+              the borehole.
+            </p>
           </div>
 
           <div className="drilling-item">
@@ -42,7 +52,10 @@ const DrillingServices = () => {
               Your browser does not support the video tag.
             </video>
             <h3>Survey of bore for water level</h3>
-            <p>Survey and measurement of bore to determine water levels and suitability.</p>
+            <p>
+              Survey and measurement of bore to determine water levels and
+              suitability.
+            </p>
           </div>
         </div>
       </div>

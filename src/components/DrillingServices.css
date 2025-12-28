@@ -1,20 +1,36 @@
 .drilling-services {
-  padding: 60px 0;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%);
-  color: var(--text-dark);
+  /* make the section stretch to near the footer (2px gap) */
+  min-height: calc(100vh - 2px);
+  padding: 0 0 2px; /* keep a 2px visual gap to footer */
+  background-image: linear-gradient(rgba(var(--dark-navy-rgb), 0.6), rgba(var(--dark-navy-rgb), 0.35)), url('/water.jpg');
+  background-size: cover;
+  background-position: center bottom; /* ensure image extends to the bottom */
+  background-repeat: no-repeat;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.drilling-services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(var(--dark-navy-rgb),0.25) 0%, rgba(var(--dark-navy-rgb),0.55) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .drilling-services .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  position: relative;
+  z-index: 2; /* above the background overlay */
 }
 
 .drilling-services .section-title {
   text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  color: var(--accent-teal);
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  color: var(--white);
+  font-weight: 700;
 }
 
 .drilling-services .services-description {
@@ -22,28 +38,37 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   font-size: 1.05rem;
-  color: rgba(0,0,0,0.7);
+  color: var(--text-dark);
 }
 
 .drilling-intro {
   text-align: center;
   margin-bottom: 40px;
   font-size: 1rem;
-  color: rgba(0,0,0,0.65);
+  color: var(--text-dark);
 }
 
 .drilling-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
+  margin-top: 18px;
 }
 
 .drilling-item {
-  background: #fff;
+  background: rgba(255,255,255,0.04); /* remove solid white, use subtle translucent layer */
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 12px 30px rgba(var(--dark-navy-rgb), 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  overflow: hidden;
+  border-left: 4px solid rgba(var(--main-accent-rgb), 0.95); /* thinner accent stripe more subtle on image */
+  color: var(--white); /* ensure text is readable on image */
+}
+
+.drilling-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(var(--dark-navy-rgb), 0.14);
 }
 
 .drilling-video {
@@ -52,21 +77,64 @@
   border-radius: 8px;
   background: #000;
   display: block;
+  max-height: 240px; /* reduce video height slightly */
+  object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .drilling-video { max-height: 260px }
+}
+
+@media (max-width: 768px) {
+  .drilling-video { max-height: 180px }
 }
 
 .drilling-item h3 {
   margin-top: 12px;
   font-size: 1.15rem;
-  color: var(--accent-teal);
+  color: var(--white);
 }
 
 .drilling-item p {
-  color: rgba(0,0,0,0.65);
-  line-height: 1.5;
-  margin-top: 6px;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.6;
+  margin-top: 8px;
 }
+
+/* subtle caption style for video captions */
+.drilling-caption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: rgba(11,35,64,0.6);
+}
+
+/* Full-bleed drilling hero */
+.drilling-hero {
+  background: transparent;
+  padding: 6.5rem 0 1.25rem; /* more top spacing, less bottom so image extends */
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--white);
+}
+
+.drilling-hero--full {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.drilling-hero-inner { max-width: 1100px; text-align: center; padding: 0 1.5rem; z-index: 2 }
+.drilling-hero-title { font-size: 2.4rem; font-weight: 800; color: var(--white); margin-bottom: 0.6rem }
+.drilling-hero-lead { font-size: 1.05rem; color: rgba(255,255,255,0.95); max-width: 900px; margin: 0 auto 0.5rem auto; line-height: 1.6 }
 
 @media (max-width: 768px) {
   .drilling-services { padding: 40px 0 }
-  .drilling-services .section-title { font-size: 2rem }
+  .drilling-services .section-title { font-size: 1.8rem }
 }

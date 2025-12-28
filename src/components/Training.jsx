@@ -45,21 +45,28 @@ const Training = () => {
 
   return (
     <section id="training" className="training-section">
+      {/* Full-bleed training hero with overlay text */}
+      <section className="training-hero-hero training-hero-hero--full">
+        <div className="training-hero-inner">
+          <a href="https://whatsapp.com/channel/0029VbCFI8h0wajoqzfgl21b" target="_blank" rel="noopener noreferrer" className="whatsapp-link hero-whatsapp">Join our WhatsApp Channel</a>
+          <h1 className="training-hero-title">HSE Extensive Skill Program</h1>
+          <p className="training-hero-lead">Comprehensive training programs designed to ensure workplace safety and professional development.</p>
+        </div>
+      </section>
+
       <div className="container">
-        <a href="https://whatsapp.com/channel/0029VbCFI8h0wajoqzfgl21b" target="_blank" rel="noopener noreferrer" className="whatsapp-link">Join our WhatsApp Channel</a>
-        <h2>HSE Extensive Skill Program</h2>
-        <p className="training-intro">
-          Comprehensive training programs designed to ensure workplace safety and professional development.
-          Our courses cover essential safety protocols, technical skills, and leadership development.
-        </p>
-        <ul>
-          {contents.map((item, index) => (
-            <li key={index} onClick={() => toggleDropdown(index)} className={`training-item ${openIndex === index ? 'open' : ''}`}>
-              <span className="title">{item.title}</span>
-              {openIndex === index && <p className="description">{item.desc}</p>}
-            </li>
-          ))}
-        </ul>
+        
+        <div className="training-list-wrap">
+         
+          <ul>
+            {contents.map((item, index) => (
+              <li key={index} onClick={() => toggleDropdown(index)} className={`training-item ${openIndex === index ? 'open' : ''}`} role="button" aria-expanded={openIndex === index} aria-controls={`training-desc-${index}`}>
+                <span className="title">{item.title}</span>
+                {openIndex === index && <p id={`training-desc-${index}`} className="description">{item.desc}</p>}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -90,13 +90,13 @@ const Main = ({ currentPage, onNavigate }) => {
                 <AnimatedElement id="hero-buttons" delay={0.6}>
                   <div className="hero-buttons">
                     <button
-                      className="btn btn-secondary"
+                      className="btn hero-cta"
                       onClick={() => onNavigate('about')}
                     >
                       Learn More
                     </button>
                     <button
-                      className="btn btn-primary"
+                      className="btn hero-cta"
                       onClick={() => onNavigate('contact')}
                     >
                       Get In Touch
@@ -107,81 +107,12 @@ const Main = ({ currentPage, onNavigate }) => {
             </div>
           </section>
 
-          {/* Company Overview Section */}
-          <AnimatedElement id="company-overview">
-            <div className="hero-container2">
-              <h2 className="hero-title2">WISH'N'DEAL ENGINEERING (PVT) LTD.</h2>
-              <p>
-                A group with collaborative spirit that facilitates Engineers and disseminates
-                construction services, fostering the world's Ethical, Social, Economic, and
-                Intellectual growth using progressive and diverse techniques on the cutting edge
-                of the construction industry. We also provide greater opportunities for Saudi youth
-                to learn and develop skills and experience to contribute better in building our
-                national growth of Saudi Arabia.
-              </p>
-            </div>
-          </AnimatedElement>
-
-          {/* Certifications & Experience Section */}
-          <AnimatedElement id="certifications">
-            <div className="hero-container3">
-              <div className="hero-title3">
-                We are ISO 9001:2015 & ISO 45001:2018 certified and locally registered with
-                PEC & SECP. We have been providing quality services in the Kingdom of Saudi Arabia
-                and Pakistan since 2006, specializing in Civil & Industrial Construction, Equipment
-                Rental, and Technical Manpower supplies. High quality construction and civil works
-                constitute an essential part of successful projects. Our competence in construction
-                is demonstrated by the successful and timely completion of our projects. Backed by
-                a team of skilled engineers and architects, we offer comprehensive services related
-                to Civil and Structural Works. Our experts visit locations, design site maps, and
-                execute projects according to our clients' requirements.
-              </div>
-              <img
-                src="/Iso.webp"
-                alt="ISO Certification"
-                className="hero-img3"
-              />
-            </div>
-          </AnimatedElement>
-
-          {/* Services Section */}
-          <AnimatedElement id="services-section">
-            <section className="services">
+          {/* About Us Intro Section */}
+          <AnimatedElement id="about-intro">
+            <section className="about-intro-section">
               <div className="container">
-                <h2 className="section-title">Our Comprehensive Services</h2>
-                <div className="services-flex">
-                  <p className="services-intro">
-                    In addition to our core services, we undertake structural steel work for
-                    heavy structures such as built-up columns and girders, utilized in:
-                  </p>
-
-                  {[
-                    { title: "Storage Sheds", icon: "🏢" },
-                    { title: "Warehouses", icon: "🏭" },
-                    { title: "Cladding Solutions", icon: "🔧" },
-                    { title: "Professional Painting", icon: "🎨" },
-                    { title: "Repair & Renovation", icon: "🔨" },
-                    { title: "Flood Light Towers", icon: "💡" },
-                    { title: "Asphalt Works", description: "Yard and parking solutions", icon: "🛣️" },
-                    { title: "Equipment Platform Structures", icon: "⚙️" },
-                    { title: "Structural & Finishing Works", icon: "🏗️" },
-                    { title: "Building Demolition", icon: "🏚️" },
-                    { title: "Backfilling & Leveling with Survey", icon: "📐" }
-                  ].map((service, index) => (
-                    <AnimatedElement
-                      key={service.title}
-                      id={`service-${index}`}
-                      animation="animate-scale"
-                      delay={index * 0.1}
-                    >
-                      <div className="service-card">
-                        <div className="service-icon">{service.icon}</div>
-                        <h3>{service.title}</h3>
-                        {service.description && <p>{service.description}</p>}
-                      </div>
-                    </AnimatedElement>
-                  ))}
-                </div>
+                <h2>About Us</h2>
+                <p>We deliver turnkey construction, equipment rental and technical manpower solutions across Saudi Arabia and Pakistan since 2006 — backed by ISO-aligned processes, a commitment to safety and lasting client value.</p>
               </div>
             </section>
           </AnimatedElement>
@@ -189,15 +120,13 @@ const Main = ({ currentPage, onNavigate }) => {
           {/* Projects Showcase Section */}
           <AnimatedElement id="projects-showcase">
             <section className="custom-projects-section">
-              <h2 className="custom-heading-main">
-                WISH'N'DEAL ENGINEERING (PVT) LTD.
-              </h2>
+              <h4 className="custom-heading-main">
+                Projects and Certifications.
+              </h4>
               <div className="custom-heading-underline"></div>
-              <p className="custom-desc-main">
-                Our team of highly skilled professionals has made it possible to improve the
-                quality of real estate experience for our prestigious clients through innovative
-                engineering solutions and exceptional project delivery.
-              </p>
+              {/* <p className="custom-desc-main">
+               Our Projects
+              </p> */}
 
               {/* Project Icons Carousel */}
               <div className="projects-carousel-container">
@@ -270,11 +199,123 @@ const Main = ({ currentPage, onNavigate }) => {
             </section>
           </AnimatedElement>
 
+          {/* Company Overview Section */}
+          {/* <AnimatedElement id="company-overview">
+            <div className="hero-container2">
+              <div className="hero-card">
+               <h2 className="hero-title2">WISH'N'DEAL ENGINEERING (PVT) LTD.</h2>
+               <p>
+                 A group with collaborative spirit that facilitates Engineers and disseminates
+                 construction services, fostering the world's Ethical, Social, Economic, and
+                 Intellectual growth using progressive and diverse techniques on the cutting edge
+                 of the construction industry. We also provide greater opportunities for Saudi youth
+                 to learn and develop skills and experience to contribute better in building our
+                 national growth of Saudi Arabia.
+               </p>
+              </div>
+             </div>
+          </AnimatedElement> */}
+
+          {/* Features Section */}
+          {/* <AnimatedElement id="features-section">
+            <section className="services features-section">
+              <div className="container">
+                <div className="features">
+                  <div className="feature-box feature-dark">
+                    <div className="icon">👷‍♂️</div>
+                    <h3>Expert Workforce</h3>
+                    <p>Skilled engineers, technicians and certified operators for safe, efficient projects.</p>
+                  </div>
+                  <div className="feature-box feature-yellow">
+                    <div className="icon">🏗️</div>
+                    <h3>Quality Work</h3>
+                    <p>ISO-certified processes and strict QA to deliver projects on time and budget.</p>
+                  </div>
+                  <div className="feature-box feature-white">
+                    <div className="icon">🛠️</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock support and rapid mobilization for urgent site requirements.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </AnimatedElement> */}
+
+          {/* Certifications & Experience Section */}
+          <AnimatedElement id="certifications">
+            <div className="hero-container3">
+              <div className="cert-card">
+                <h3 className="cert-title">Certification</h3>
+                <div className="cert-grid">
+                  <div className="cert-text">
+                    We are ISO 9001:2015 & ISO 45001:2018 certified and locally registered with
+                    PEC & SECP. We have been providing quality services in the Kingdom of Saudi Arabia
+                    and Pakistan since 2006, specializing in Civil & Industrial Construction, Equipment
+                    Rental, and Technical Manpower supplies. High quality construction and civil works
+                    constitute an essential part of successful projects. Our competence in construction
+                    is demonstrated by the successful and timely completion of our projects. Backed by
+                    a team of skilled engineers and architects, we offer comprehensive services related
+                    to Civil and Structural Works. Our experts visit locations, design site maps, and
+                    execute projects according to our clients' requirements.
+                  </div>
+                  <div className="cert-image-wrap">
+                    <img src="/Iso.webp" alt="ISO Certification" className="hero-img3" />
+                  </div>
+                </div>
+              </div>
+             </div>
+          </AnimatedElement>
+
+          {/* Services Section */}
+          <AnimatedElement id="services-section">
+            <section className="services">
+              <div className="container">
+                <h2 className="section-title">Our Comprehensive Services</h2>
+                <p className="services-intro">
+                    In addition to our core services, we undertake structural steel work for
+                    heavy structures such as built-up columns and girders, utilized in:
+                  </p>
+                <div className="services-flex">
+                  
+
+                  {[
+                    { title: "Storage Sheds", icon: "🏢" },
+                    { title: "Warehouses", icon: "🏭" },
+                    { title: "Cladding Solutions", icon: "🔧" },
+                    { title: "Professional Painting", icon: "🎨" },
+                    { title: "Repair & Renovation", icon: "🔨" },
+                    { title: "Flood Light Towers", icon: "💡" },
+                    { title: "Asphalt Works", description: "Yard and parking solutions", icon: "🛣️" },
+                    { title: "Equipment Platform Structures", icon: "⚙️" },
+                    { title: "Structural & Finishing Works", icon: "🏗️" },
+                    { title: "Building Demolition", icon: "🏚️" },
+                    { title: "Backfilling & Leveling with Survey", icon: "📐" }
+                  ].map((service, index) => (
+                    <AnimatedElement
+                      key={service.title}
+                      id={`service-${index}`}
+                      animation="animate-scale"
+                      delay={index * 0.1}
+                    >
+                      <div className="service-card">
+                        <div className="service-icon">{service.icon}</div>
+                        <h3>{service.title}</h3>
+                        {service.description && <p>{service.description}</p>}
+                      </div>
+                    </AnimatedElement>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </AnimatedElement>
+
+          
+
           {/* Enhanced Clients Section */}
           <AnimatedElement id="clients-section">
             <section className="clients-section">
               <div className="container">
-                <h2 className="section-title">Our Trusted Partners & Clients</h2>
+                <h2 className="section-title1">Our Trusted Partners & Clients</h2>
                 <p className="clients-subtitle">
                   We are proud to work with industry leaders and prestigious organizations 
                   across Saudi Arabia and Pakistan.
@@ -316,53 +357,66 @@ const Main = ({ currentPage, onNavigate }) => {
 
       {currentPage === 'about' && (
         <AnimatedElement id="about-page">
-          <section className="about">
-            <div className="container">
-              <div className="about-content">
-                <div className="about-text">
-                  
-                  <h3>WHO WE ARE</h3>
-                  <p>
-                    We have organized management teams with clear delineation of individual 
-                    responsibility and authority. Our workforce comprises HSE, Telecom, Civil, 
-                    Mechanical, Chemical & Electrical engineers, Technicians, skilled workers, 
-                    riggers, crane & other heavy machine operators who have extensive experience 
-                    in project planning and implementation in their respective fields. They are 
-                    also well conversant with ISO 9001 health & safety procedures for industries. 
-                    As a result, we competently deliver the highest quality of services to our 
-                    clients, meeting their satisfaction levels at the best standards.
-                  </p>
-                  
-                  <h3>OUR VISION</h3>
-                  <p>
-                    To set the standard and pace in variety of services across all arenas, through 
-                    hard work, ethical business practices, and philanthropic endeavors. We aim to 
-                    provide quality services that consistently exceed the expectations of our 
-                    esteemed customers while contributing to sustainable development.
-                  </p>
-                  
-                  <h3>OUR MISSION</h3>
-                  <p>
-                    Our group, with collaborative spirit, facilitates Engineers and disseminates 
-                    construction and other services fostering the world's Ethical, Social, 
-                    Economic, and Intellectual growth. We use progressive and diverse techniques 
-                    on the cutting edge of the construction industry. Additionally, we provide 
-                    greater opportunities for Saudi youth to learn and develop skills and 
-                    experience to contribute better in building our nation's growth in Saudi Arabia.
-                  </p>
+          {/* full-width About hero with extended image and overlaid cards */}
+          <section class="about-page">
 
-                  <h3>OUR VALUES</h3>
-                  <ul className="values-list">
-                    <li><strong>Quality Excellence:</strong> Delivering superior results in every project</li>
-                    <li><strong>Safety First:</strong> Maintaining the highest safety standards</li>
-                    <li><strong>Innovation:</strong> Embracing cutting-edge technologies and methods</li>
-                    <li><strong>Sustainability:</strong> Promoting environmentally responsible practices</li>
-                    <li><strong>Integrity:</strong> Conducting business with transparency and honesty</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
+   {/* Full-Bleed Hero  */}
+  <section class="about-hero-hero">
+    <div class="about-hero-inner">
+      <h1 class="about-hero-title">About Us</h1>
+      <p class="about-hero-lead">
+        We deliver turnkey construction, equipment rental and technical manpower solutions
+        across Saudi Arabia and Pakistan since 2006 — backed by ISO-aligned processes,
+        a commitment to safety and lasting client value.
+      </p>
+    </div>
+  </section>
+
+  {/* Cards Overlay */}
+  <div class="about-cards-overlay">
+
+    {/* Card 1  */}
+    <div class="about-card">
+      <h3 class="about-card-title">WHO WE ARE</h3>
+      <p class="about-card-desc">
+        A results-driven engineering firm focused on safe, compliant and cost-effective
+        construction delivery. We combine local knowledge with international standards to
+        execute projects from site preparation through finishing.
+      </p>
+    </div>
+
+    {/* Card 2  */}
+    <div class="about-card">
+      <h3 class="about-card-title">OUR VISION</h3>
+      <p class="about-card-desc">
+        To be the trusted regional partner for sustainable, innovative construction
+        solutions that create lasting value for clients and communities.
+      </p>
+    </div>
+
+    {/* Card 3  */}
+    <div class="about-card">
+      <h3 class="about-card-title">OUR MISSION</h3>
+      <p class="about-card-desc">
+        Deliver exceptional projects through disciplined execution, continuous improvement
+        and investment in people — supported by ISO-aligned systems and a culture of safety.
+      </p>
+    </div>
+
+    {/* Card 4  */}
+    <div class="about-card">
+      <h3 class="about-card-title">OUR VALUES</h3>
+      <ul class="values-grid">
+        <li><strong>Quality Excellence</strong></li>
+        <li><strong>Safety First</strong></li>
+        <li><strong>Innovation</strong></li>
+        <li><strong>Integrity</strong></li>
+        <li><strong>Sustainability</strong></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
         </AnimatedElement>
       )}
 
