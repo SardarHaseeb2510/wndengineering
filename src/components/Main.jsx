@@ -113,7 +113,7 @@ const Main = ({ currentPage, onNavigate }) => {
           <AnimatedElement id="projects-showcase">
             <section className="custom-projects-section">
               <h4 className="custom-heading-main">
-                Projects and Certifications.
+                Projects and Certifications
               </h4>
               <div className="custom-heading-underline"></div>
               {/* <p className="custom-desc-main">

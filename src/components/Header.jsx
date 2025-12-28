@@ -3,15 +3,21 @@ import './Header.css';
 
 const Header = ({ currentPage, onNavigate }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const handleClick = (page) => {
     setDropdownOpen(false);
+    setMobileMenuOpen(false);
     onNavigate(page);
   };
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   // Close dropdown if clicked outside
@@ -38,11 +44,8 @@ const Header = ({ currentPage, onNavigate }) => {
             </div>
           </div>
           <div className="top-center">
-            <div className="top-contact">+966 (13) 361 9165 &nbsp; | &nbsp; business@wndengineering.com</div>
-           
-          </div>
-          <div className="top-right">
-            <div className="top-contact">+92 3145300069 &nbsp; | &nbsp; info@wndengineering.com</div>
+            <div className="top-contact">+966 (13) 361 9165 &nbsp; &nbsp; business@wndengineering.com</div>
+            <div className="top-contact">+92 3145300069 &nbsp; &nbsp; info@wndengineering.com</div>
           </div>
         </div>
       </div>
@@ -53,7 +56,12 @@ const Header = ({ currentPage, onNavigate }) => {
           <div className="logo">
             {/* <h1>Wish'N'Deal</h1> */}
           </div>
-          <nav className="nav">
+          <button className="hamburger" onClick={toggleMobileMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav className={`nav ${mobileMenuOpen ? 'open' : ''}`}>
             <ul className="nav-list">
               <li>
                 <button

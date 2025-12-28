@@ -457,6 +457,7 @@ body {
   overflow: hidden;
   position: relative;
   padding-top: 5px;
+  margin-top: 2px;
 }
 
 .custom-projects-section::before {
